@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #ffe6f0;
+  background-color: #f3a4c3;
   margin: 0;
 }
 
@@ -36,20 +36,20 @@ button {
 
 /* Yes button style */
 button#yesBtn {
-  background-color: #ff66b3;
+  background-color: #ef1180;
   color: white;
 }
 
 /* No button style */
 button#noBtn {
-  background-color: #999;
+  background-color: #e5e5e5;
   color: white;
 }
 
 /* Scrapbook page container */
 .scrapbook {
   text-align: center;
-  background-color: #fff0f5;
+  background-color: #eb0b56;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
