@@ -1,3 +1,4 @@
+/* General body styles */
 body {
   display: flex;
   justify-content: center;
@@ -8,7 +9,8 @@ body {
   margin: 0;
 }
 
-.card, .scrapbook {
+/* Card for Valentine page */
+.card {
   text-align: center;
   background-color: #fff0f5;
   padding: 30px;
@@ -16,10 +18,12 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Buttons container */
 .buttons {
   margin-top: 20px;
 }
 
+/* Buttons general style */
 button {
   padding: 10px 20px;
   margin: 10px;
@@ -30,34 +34,43 @@ button {
   transition: all 0.2s ease;
 }
 
+/* Yes button style */
 button#yesBtn {
   background-color: #ff66b3;
   color: white;
 }
 
+/* No button style */
 button#noBtn {
   background-color: #999;
   color: white;
 }
 
+/* Scrapbook page container */
+.scrapbook {
+  text-align: center;
+  background-color: #fff0f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Scrapbook image layout */
 .scrapbook-page {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
 }
 
+/* Scrapbook image style with wooden frame */
 .scrapbook-page img {
   width: 200px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-}
-
-.note {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 18px;
-  color: #d6336c;
-}
+  height: 200px;
+  object-fit: cover;
+  border: 10px solid #8B4513; /* brown wood frame */
+  border-radius: 8px;
+  box-shadow: 5px
