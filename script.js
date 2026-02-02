@@ -17,3 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "scrapbook.html";
   });
 });
+

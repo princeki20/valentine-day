@@ -2,25 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>💌 A Message For You</title>
+  <title>Will You Be My Valentine?</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="card">
-    <h2>A message for you 💌</h2>
-    <h1>Will you be my Valentine?</h1>
+    <h1>💌 A message for you 💌</h1>
+    <p>Will you be my Valentine?</p>
 
     <div class="buttons">
       <button id="yesBtn">Yes 💖</button>
-      <button id="noBtn">No 💔</button>
+      <button id="noBtn">No 🙈</button>
     </div>
   </div>
 
-    <audio controls>
-    <source src="bagroundmusic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("yesBtn").onclick = () => {
+      window.location.href = "scrapbook.html";
+    };
+
+    const noBtn = document.getElementById("noBtn");
+    noBtn.onmouseover = () => {
+      noBtn.style.position = "absolute";
+      noBtn.style.left = Math.random() * 80 + "%";
+      noBtn.style.top = Math.random() * 80 + "%";
+    };
+  </script>
+
 </body>
 </html>

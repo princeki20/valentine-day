@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>💖 Our Scrapbook</title>
+  <title>Our Scrapbook 💕</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Add confetti library -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
-  <div class="scrapbook">
-    <h1>💖 Our Scrapbook 💖</h1>
-    <p>Some of my favorite memories with you</p>
-
-    <div class="scrapbook-page">
-      <img src="images/Aline.JPG" alt="Memory 1">
-      <img src="images/Babes.jpg" alt="Memory 2">
-      <img src="images/myman.jpeg" alt="Memory 3">
-    </div>
-    <div class="note">So many more memories to come 💕</div>
-  </div>
-
-  <audio id="bgMusic" loop preload="none">
-    <source src="bagroundmusic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+  <!-- Background music -->
+  <audio id="bgMusic" loop>
+    <source src="babycomeback.mp3" type="audio/mpeg">
   </audio>
 
-  <script src="scrapbook.js"></script>
+  <div class="scrapbook">
+    <h1>💖 Our Memories 💖</h1>
+
+    <div class="scrapbook-page">
+      <img src="images/Aline.JPG">
+      <img src="images/Babes.jpg">
+      <img src="images/myman.jpeg">
+    </div>
+
+    <p class="note">Every moment with you means everything to me 💌</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
