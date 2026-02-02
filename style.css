@@ -36,3 +36,28 @@ button {
 #noBtn {
   background-color: #ccc;
 }
+.scrapbook {
+  background: #fff8dc;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.scrapbook-page {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.photo-placeholder {
+  background: #ffe6ec;
+  height: 200px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
