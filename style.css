@@ -1,18 +1,19 @@
 body {
-  background-color: #ffe6ec;
-  font-family: Arial, sans-serif;
-  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f0;
+  margin: 0;
 }
 
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
+.card, .scrapbook {
   text-align: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background-color: #fff0f5;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .buttons {
@@ -20,44 +21,43 @@ body {
 }
 
 button {
-  padding: 12px 25px;
-  font-size: 18px;
+  padding: 10px 20px;
   margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
   border: none;
   border-radius: 8px;
-  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-#yesBtn {
-  background-color: #ff4d6d;
+button#yesBtn {
+  background-color: #ff66b3;
   color: white;
 }
 
-#noBtn {
-  background-color: #ccc;
-}
-.scrapbook {
-  background: #fff8dc;
-  padding: 30px;
-  border-radius: 20px;
-  width: 80%;
-  max-width: 900px;
-  text-align: center;
+button#noBtn {
+  background-color: #999;
+  color: white;
 }
 
 .scrapbook-page {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
 
-.photo-placeholder {
-  background: #ffe6ec;
-  height: 200px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+.scrapbook-page img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.note {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #d6336c;
 }
