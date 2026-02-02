@@ -1,0 +1,38 @@
+body {
+  background-color: #ffe6ec;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+#noBtn {
+  background-color: #ccc;
+}
