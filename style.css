@@ -64,14 +64,17 @@ button#noBtn {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding: 10px; /* padding to avoid images touching edges */
 }
 
 /* Scrapbook image style - full image shown */
 .scrapbook-page img {
-  max-width: 300px;
-  height: auto; /* keeps original aspect ratio */
-  border-radius: 8px;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  max-width: 300px; /* keeps images a reasonable size */
+  width: 100%;
+  height: auto; /* maintain original aspect ratio */
+  border: none; /* removed any frames */
+  border-radius: 8px; /* slight rounding */
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2); /* soft shadow for depth */
   transition: transform 0.3s ease;
 }
 
