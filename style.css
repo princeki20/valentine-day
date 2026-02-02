@@ -66,12 +66,25 @@ button#noBtn {
   margin-top: 20px;
 }
 
-/* Scrapbook image style with wooden frame */
+/* Scrapbook image style - full image shown */
 .scrapbook-page img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border: 10px solid #8B4513; /* brown wood frame */
+  max-width: 300px;
+  height: auto; /* keeps original aspect ratio */
   border-radius: 8px;
-  box-shadow: 5px
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Playful hover effect */
+.scrapbook-page img:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+/* Note text under scrapbook images */
+.note {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #d6336c;
+  text-align: center;
 }
