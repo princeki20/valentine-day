@@ -88,6 +88,60 @@ button#noBtn {
   width: 100%;
   margin-top: 20px;
   font-size: 18px;
-  color: #d6336c;
+  color: #0b0b0b;
   text-align: center;
 }
+
+/* Background music controls */
+.music-controls {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.music-toggle, .music-mute {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.music-mute { padding: 8px 10px; }
+
+.music-volume {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.95);
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.music-volume input[type="range"] {
+  width: 110px; /* compact */
+  -webkit-appearance: none;
+  height: 6px;
+  background: linear-gradient(90deg, #ef1180 0%, #ef1180 var(--vol, 50%), #e5e5e5 var(--vol, 50%));
+  border-radius: 6px;
+}
+
+.music-volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 2px solid #ef1180;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.music-toggle:focus, .music-mute:focus, .music-volume input[type="range"]:focus { outline: 2px solid rgba(235,64,170,0.5); }
+
