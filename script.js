@@ -1,17 +1,17 @@
-const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
+const no = document.getElementById("no");
+const yes = document.getElementById("yes");
 
 // No button runs away
 noBtn.addEventListener("mouseover", () => {
   const x = Math.random() * (window.innerWidth - 100);
   const y = Math.random() * (window.innerHeight - 100);
 
-  noBtn.style.position = "absolute";
-  noBtn.style.left = `${x}px`;
-  noBtn.style.top = `${y}px`;
+  no.style.position = "absolute";
+  no.style.left = `${x}px`;
+  no.style.top = `${y}px`;
 });
 
 // Yes button opens scrapbook page
-yesBtn.addEventListener("click", () => {
+yes.addEventListener("click", () => {
   window.location.href = "scrapbook.html";
 });
