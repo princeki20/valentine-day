@@ -21,12 +21,12 @@
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
 
-    // Yes button → open scrapbook
+    // Yes button → go to scrapbook page
     yesBtn.onclick = () => {
       window.location.href = "scrapbook.html";
     };
 
-    // No button → runs away
+    // No button → run away
     noBtn.addEventListener("mouseenter", () => {
       const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
       const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);

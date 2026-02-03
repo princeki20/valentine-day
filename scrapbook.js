@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   audio.volume = 0.5;
 
-  // Controls container
+  // Music controls container
   const controls = document.createElement("div");
   controls.className = "music-controls";
   document.body.appendChild(controls);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   playBtn.textContent = "▶️ Play music";
   controls.appendChild(playBtn);
 
-  // Mute button
+  // Mute / Unmute button
   const muteBtn = document.createElement("button");
   muteBtn.className = "music-mute";
   muteBtn.textContent = "🔊 Unmuted";
@@ -46,12 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
     muteBtn.textContent = audio.muted ? "🔇 Muted" : "🔊 Unmuted";
   };
 
-  // Start music on first click (browser policy)
-  const startMusicOnce = async () => {
-    try { await audio.play(); playBtn.textContent = "⏸️ Pause music"; } catch {}
-    window.removeEventListener("click", startMusicOnce);
-  };
-  window.addEventListener("click", startMusicOnce);
+  // Start music on first click anywhere
+  window.addEventListener("click", async () => {
+    try { await audio.play(); playBtn.textContent = "⏸️ Pause music"; } 
+    catch { console.log("Music blocked, click Play to start"); }
+  }, { once: true });
 
   // ----- Image hover effect -----
   document.querySelectorAll(".scrapbook-page img").forEach(img => {

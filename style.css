@@ -64,17 +64,16 @@ button#noBtn {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
-  padding: 10px; /* padding to avoid images touching edges */
+  padding: 10px;
 }
 
-/* Scrapbook image style - full image shown */
+/* Scrapbook image style - limited size */
 .scrapbook-page img {
-  max-width:auto; /* keeps images a reasonable size */
-  width: 100%;
-  height: auto; /* maintain original aspect ratio */
-  border: none; /* removed any frames */
-  border-radius: 8px; /* slight rounding */
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.2); /* soft shadow for depth */
+  max-width: 200px;   /* smaller images */
+  height: auto;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
 
@@ -114,41 +113,3 @@ button#noBtn {
 }
 
 .music-mute { padding: 8px 10px; }
-
-.music-volume {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.95);
-  padding: 6px 10px;
-  border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.06);
-}
-
-.music-volume input[type="range"] {
-  width: 110px; /* compact */
-  height: 6px;
-  background: linear-gradient(90deg, #ef1180 0%, #ef1180 var(--vol, 50%), #e5e5e5 var(--vol, 50%));
-  border-radius: 6px;
-}
-
-.music-volume input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border: 2px solid #ef1180;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.music-toggle:focus, .music-mute:focus, .music-volume input[type="range"]:focus { outline: 2px solid rgba(235,64,170,0.5); }
-
-.music-controls {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  display: flex;
-  gap: 8px;
-  z-index: 1000;
-}
