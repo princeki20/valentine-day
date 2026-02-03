@@ -2,38 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Will You Be My Valentine?</title>
+  <title>Be My Valentine 💕</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="card">
-    <h1>💌 A message for you 💌</h1>
-    <p>Will you be my Valentine?</p>
+<div class="card">
+  <h1>💌 A message for you 💌</h1>
+  <p>Will you be my Valentine?</p>
 
-    <div class="buttons">
-      <button id="yesBtn">Yes 💖</button>
-      <button id="noBtn">No 🙈</button>
-    </div>
+  <div class="buttons">
+    <button id="yesBtn">Yes 💖</button>
+    <button id="noBtn">No 🙈</button>
   </div>
+</div>
 
-  <script>
-    const yesBtn = document.getElementById("yesBtn");
-    const noBtn = document.getElementById("noBtn");
+<script>
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
 
-    // Yes button → go to scrapbook page
-    yesBtn.onclick = () => {
-      window.location.href = "scrapbook.html";
-    };
+  yesBtn.onclick = () => {
+    window.location.href = "scrapbook.html";
+  };
 
-    // No button → run away
-    noBtn.addEventListener("mouseenter", () => {
-      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-      noBtn.style.position = "absolute";
-      noBtn.style.left = `${x}px`;
-      noBtn.style.top = `${y}px`;
-    });
-  </script>
+  noBtn.onmouseenter = () => {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 80 + "%";
+    noBtn.style.top = Math.random() * 80 + "%";
+  };
+</script>
+
 </body>
 </html>

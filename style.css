@@ -1,29 +1,26 @@
 /* General body styles */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f3a4c3;
-  margin: 0;
 }
 
-/* Card for Valentine page */
+/* Center card on index page */
 .card {
   text-align: center;
   background-color: #fff0f5;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+  margin: 100px auto;
 }
 
-/* Buttons container */
+/* Buttons */
 .buttons {
   margin-top: 20px;
 }
 
-/* Buttons general style */
 button {
   padding: 10px 20px;
   margin: 10px;
@@ -31,85 +28,67 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  transition: all 0.2s ease;
 }
 
-/* Yes button style */
-button#yesBtn {
+#yesBtn {
   background-color: #ef1180;
   color: white;
 }
 
-/* No button style */
-button#noBtn {
-  background-color: #e5e5e5;
+#noBtn {
+  background-color: #999;
   color: white;
 }
 
-/* Scrapbook page container */
+/* Scrapbook container */
 .scrapbook {
-  text-align: center;
   background-color: #eb0b56;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   max-width: 1200px;
-  margin: 20px auto;
-}
-
-/* Scrapbook image layout */
-.scrapbook-page {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  padding: 10px;
-}
-
-/* Scrapbook image style - limited size */
-.scrapbook-page img {
-  max-width: 200px;   /* smaller images */
-  height: auto;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-/* Playful hover effect */
-.scrapbook-page img:hover {
-  transform: rotate(-2deg) scale(1.05);
-}
-
-/* Note text under scrapbook images */
-.note {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 18px;
-  color: #0b0b0b;
+  margin: 40px auto;
   text-align: center;
 }
 
-/* Background music controls */
+/* Image grid: 3 columns */
+.scrapbook-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Image styling with borders */
+.scrapbook-page img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Note text */
+.note {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+/* Music controls */
 .music-controls {
   position: fixed;
   right: 16px;
   bottom: 16px;
   display: flex;
   gap: 8px;
-  align-items: center;
   z-index: 1000;
 }
 
-.music-toggle, .music-mute {
-  background: rgba(255,255,255,0.95);
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 8px 12px;
+.music-toggle,
+.music-mute {
+  background: white;
   border-radius: 20px;
+  padding: 8px 12px;
+  border: none;
   cursor: pointer;
-  font-size: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
-
-.music-mute { padding: 8px 10px; }
