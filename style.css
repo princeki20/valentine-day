@@ -69,8 +69,8 @@ button#noBtn {
 
 /* Scrapbook image style - limited size */
 .scrapbook-page img {
-  max-width: 200px;   /* smaller images */
-  height: auto;
+  max-width: 100px;   /* smaller images */
+  height: 100;
   border: none;
   border-radius: 8px;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
