@@ -48,3 +48,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     muteBtn.textContent = audio.muted ? "🔇" : "🔊";
   };
 });
+// LIGHTBOX FUNCTIONALITY
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
+
+document.querySelectorAll(".scrapbook-page img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener("click", e => {
+  if (e.target === lightbox) lightbox.style.display = "none";
+});
