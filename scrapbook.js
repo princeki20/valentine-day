@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  // Confetti
+
+  // 🎊 Confetti
   if (typeof confetti === "function") {
     confetti({
       particleCount: 200,
@@ -8,10 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // 🎵 Music autoplay
   const audio = document.getElementById("bgMusic");
   if (!audio) return;
-
   audio.volume = 0.5;
+
+  try { await audio.play(); } catch {}
 
   // Music controls
   const controls = document.createElement("div");
@@ -28,11 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   muteBtn.textContent = "🔊";
   controls.appendChild(muteBtn);
 
-  // Play automatically (allowed because user clicked YES)
-  try {
-    await audio.play();
-  } catch {}
-
   playBtn.onclick = async () => {
     if (audio.paused) {
       await audio.play();
@@ -47,24 +45,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     audio.muted = !audio.muted;
     muteBtn.textContent = audio.muted ? "🔇" : "🔊";
   };
-});
-// LIGHTBOX FUNCTIONALITY
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeBtn = document.querySelector(".lightbox .close");
 
-document.querySelectorAll(".scrapbook-page img").forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
+  // 🏠 Home button
+  const homeBtn = document.getElementById("homeBtn");
+  homeBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
   });
-});
 
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
+  // 📸 Lightbox functionality
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox .close");
 
-// Close lightbox when clicking outside the image
-lightbox.addEventListener("click", e => {
-  if (e.target === lightbox) lightbox.style.display = "none";
+  document.querySelectorAll(".scrapbook-page img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+
 });
